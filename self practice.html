@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try To Genrate random color </title>
+    <style>
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+
+    </style>
+<body>
+
+<div class="main">
+    <button>Genrate color</button>
+</div>
+
+
+    <script>
+
+function randomColor(){
+    let randomidx = Math.floor(Math.random()*1785949845);
+    // console.log(randomidx)
+    let code = "#" + randomidx.toString(16);
+    // console.log(code)
+    document.querySelector(".main").style.backgroundColor = code;
+
+}
+function Genrate(){
+    document.querySelector("button").addEventListener("click",() => {
+        randomColor()
+    })
+}
+// randomColor()
+Genrate()
+
+    </script>
+</body>
+</html>
